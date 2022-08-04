@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class Calculator implements CalculatorInterface{
 
-    private final ParserXML parser;
+    private ParserXML parser;
 
     private final Scanner scanner = new Scanner(System.in);
 
@@ -22,6 +22,13 @@ public class Calculator implements CalculatorInterface{
      */
     public Calculator(ParserXML parser) {
         this.parser = parser;
+    }
+
+    /**
+     * Class constructor
+     */
+    public Calculator() {
+
     }
 
     /**
