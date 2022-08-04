@@ -53,7 +53,7 @@ public class Calculator implements CalculatorInterface {
                     System.out.println(calculate(inputEuroCurrency, inputCurrencyName, inputCurrencyRate));
                 }
             }
-            System.out.println("If you want continue press Enter, else type 'NO'");
+            System.out.println("If you want to continue press Enter, else type 'NO'");
             answer = scanner.nextLine();
 
         } while (!answer.equals("NO"));

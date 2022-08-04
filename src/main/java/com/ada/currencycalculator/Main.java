@@ -11,7 +11,6 @@ import java.io.IOException;
  * This is currency calculator application
  *
  * @author Ada
- * @date 04/08/2022
  */
 public class Main {
     /**
@@ -19,6 +18,9 @@ public class Main {
      * and call their respective methods
      *
      * @param args the command line arguments
+     * @throws ParserConfigurationException indicates a serious configuration error
+     * @throws IOException                  signals that an I/O exception has occurred
+     * @throws SAXException                 encapsulate a general SAX error or warning
      */
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
         ParserXML parserXML = new ParserXML();
