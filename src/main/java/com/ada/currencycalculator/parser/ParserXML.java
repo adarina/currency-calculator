@@ -15,10 +15,16 @@ import java.math.BigDecimal;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+/**
+ * This is a class for ParserXML
+ */
 public class ParserXML implements ParserXMLInterface{
 
     private final Map<String, BigDecimal> currencies = new LinkedHashMap<>();
 
+    /**
+     * Method parse given xml file and add elements to {@code Map<String, BigDecimal>}
+     */
     @Override
     public void parseCurrencies(String file) throws ParserConfigurationException, IOException, SAXException {
 
@@ -39,11 +45,17 @@ public class ParserXML implements ParserXMLInterface{
             }
         }
     }
-
+    /**
+     * Method get {@code Map<>} currencies
+     * @return HashMap of currencies
+     */
     public Map<String, BigDecimal> getAllCurrencies() {
         return currencies;
     }
 
+    /**
+     * Method prints all {@code String} names from {@code Map<String, BigDecimal>}
+     */
     @Override
     public void printAllCurrenciesNames() {
         for (String key : currencies.keySet()) {
