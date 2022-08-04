@@ -10,7 +10,7 @@ import java.util.Scanner;
 /**
  * This is a class for Calculator
  */
-public class Calculator implements CalculatorInterface{
+public class Calculator implements CalculatorInterface {
 
     private ParserXML parser;
 
@@ -18,6 +18,7 @@ public class Calculator implements CalculatorInterface{
 
     /**
      * Class constructor with {@code ParserXML} to create.
+     *
      * @param parser class with currencies
      */
     public Calculator(ParserXML parser) {
@@ -58,12 +59,12 @@ public class Calculator implements CalculatorInterface{
         } while (!answer.equals("NO"));
     }
 
-    /**This method takes a {@code String}
+    /**
+     * This method takes a {@code String}
      * and searches in the given map {@code Map<String, BigDecimal>}
-     * @param name
-     *          name of currency
-     * @param currencies
-     *          map of currencies names and rates
+     *
+     * @param name       name of currency
+     * @param currencies map of currencies names and rates
      * @return BigDecimal value associated with searched key in map, null otherwise
      */
     public BigDecimal getCurrencyRate(String name, Map<String, BigDecimal> currencies) {
@@ -76,11 +77,13 @@ public class Calculator implements CalculatorInterface{
         return rate;
     }
 
-    /**This method takes a {@code String} and format it to {@code BigDecimal} then
+    /**
+     * This method takes a {@code String} and format it to {@code BigDecimal} then
      * multiply it by given {@code BigDecimal}
+     *
      * @param amount amount in euro
-     * @param name name of wanted currency
-     * @param rate rate of currency
+     * @param name   name of wanted currency
+     * @param rate   rate of currency
      * @return String with formatted result
      */
     public String calculate(String amount, String name, BigDecimal rate) {
@@ -88,10 +91,11 @@ public class Calculator implements CalculatorInterface{
         return String.format("Result: %.2f " + name, currency.multiply(rate));
     }
 
-    /**This method takes a {@code String}
+    /**
+     * This method takes a {@code String}
      * and match with regex
-     * @param name
-     *          name of currency
+     *
+     * @param name name of currency
      * @return true if matches, false otherwise
      */
     public boolean isValidCurrency(String name) {
@@ -105,10 +109,9 @@ public class Calculator implements CalculatorInterface{
     /**
      * This method takes a {@code String}
      * and searches in the given map {@code Map<String, BigDecimal>}
-     * @param name
-     *          name of currency
-     * @param currencies
-     *          map of currencies names and rates
+     *
+     * @param name       name of currency
+     * @param currencies map of currencies names and rates
      * @return true if found, false otherwise
      */
     public boolean isValidCurrencyName(String name, Map<String, BigDecimal> currencies) {

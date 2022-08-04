@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * This is a class for ParserXML
  */
-public class ParserXML implements ParserXMLInterface{
+public class ParserXML implements ParserXMLInterface {
 
     private final Map<String, BigDecimal> currencies = new LinkedHashMap<>();
 
@@ -45,8 +45,10 @@ public class ParserXML implements ParserXMLInterface{
             }
         }
     }
+
     /**
      * Method get {@code Map<>} currencies
+     *
      * @return HashMap of currencies
      */
     public Map<String, BigDecimal> getAllCurrencies() {

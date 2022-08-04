@@ -19,6 +19,7 @@ public interface ParserXMLInterface {
 
     /**
      * Method get {@code Map<>} currencies
+     *
      * @return HashMap of currencies
      */
     Map<String, BigDecimal> getAllCurrencies();

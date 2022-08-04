@@ -14,29 +14,32 @@ public interface CalculatorInterface {
      */
     void init();
 
-    /**This method takes a {@code String}
+    /**
+     * This method takes a {@code String}
      * and searches in the given map {@code Map<String, BigDecimal>}
-     * @param name
-     *          name of currency
-     * @param currencies
-     *          map of currencies names and rates
+     *
+     * @param name       name of currency
+     * @param currencies map of currencies names and rates
      * @return BigDecimal value associated with searched key in map, null otherwise
      */
     BigDecimal getCurrencyRate(String name, Map<String, BigDecimal> currencies);
 
-    /**This method takes a {@code String} and format it to {@code BigDecimal} then
+    /**
+     * This method takes a {@code String} and format it to {@code BigDecimal} then
      * multiply it by given {@code BigDecimal}
+     *
      * @param amount amount in euro
-     * @param name name of wanted currency
-     * @param rate rate of currency
+     * @param name   name of wanted currency
+     * @param rate   rate of currency
      * @return String with formatted result
      */
     String calculate(String amount, String name, BigDecimal rate);
 
-    /**This method takes a {@code String}
+    /**
+     * This method takes a {@code String}
      * and match with regex
-     * @param name
-     *          name of currency
+     *
+     * @param name name of currency
      * @return true if matches, false otherwise
      */
     boolean isValidCurrency(String name);
@@ -44,10 +47,9 @@ public interface CalculatorInterface {
     /**
      * This method takes a {@code String}
      * and searches in the given map {@code Map<String, BigDecimal>}
-     * @param name
-     *          name of currency
-     * @param currencies
-     *          map of currencies names and rates
+     *
+     * @param name       name of currency
+     * @param currencies map of currencies names and rates
      * @return true if found, false otherwise
      */
     boolean isValidCurrencyName(String name, Map<String, BigDecimal> currencies);
